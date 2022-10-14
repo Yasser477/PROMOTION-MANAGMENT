@@ -7,16 +7,13 @@
     //methode 
 
     public function addPromotion($promotion){
-
         $name = $promotion->getName();  
-
     //insert methode
-
     $insertRow = "INSERT INTO promotion (name) VALUES ('$name')";
-
     mysqli_query($this->connect(),$insertRow);
-
     }
+
+
 
     public function displayData(){
         $sql = "SELECT * FROM promotion";

@@ -23,13 +23,13 @@ if(!empty($_POST)){
 
     }
 
-    if(isset($_GET[""])){
+    // if(isset($_GET[""])){
 
-        $promoEdt = new promotionDAL();
-        $prm = new promotion();
+    //     $promoEdt = new promotionDAL();
+    //     $prm = new promotion();
         
 
-    }
+    // }
         
 
 
@@ -48,11 +48,11 @@ if(!empty($_POST)){
 <body>
 
 <header>
-		<h1 class="text-center text-info">Ajouter promotion</h1>
+		<h1 class="text-center text-info">ADD PROMO</h1>
 	</header> <br> <br>
 
 <form action="" method="POST" class="text-center">
-Nom de promotion: <input type="text" name="Name">                                                          
+THE NAME OF PROMO <input type="text" name="Name">                                                          
    
 <button type="submit">Envoyer</button> <br> <br>
 
