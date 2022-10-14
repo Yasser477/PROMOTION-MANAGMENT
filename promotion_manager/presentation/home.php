@@ -23,7 +23,7 @@ if(!empty($_POST)){
 
     }
 
-    if(isset($_GET["idDelete"])){
+    if(isset($_GET[""])){
 
         $promoEdt = new promotionDAL();
         $prm = new promotion();
@@ -77,7 +77,7 @@ Nom de promotion: <input type="text" name="name">
             echo'
     <tr>
         <td>'.$value["name"].'</td>
-        <td> <a href="home.php" class="btn btn-info" > edit </a> </td>
+        <td> <a href="upD.php" name="editBtn" class="btn btn-info" > edit </a> </td>
         <td>
         <a href="home.php?idDelete='.$value["id"].'" class="btn btn-danger" > delete </a>  
         </td>

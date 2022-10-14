@@ -33,9 +33,20 @@
         $deleteR = mysqli_query($this->connect(), $dlt);
     }
 
+
+    public function selectById($id){
+
+        $edi = "SELECT * FROM promotion WHERE id = $id";
+        $ediUp = mysqli_query($this->connect(), $edi);
+
+        if($ediUp->num_rows==1){
+            return $ediUp;
+        }
+    }
+
     public function editName(){
 
-        $edt = "UPDATE FROM promotion WHERE (name) = $name ";
+        $edt = "UPDATE FROM promotion WHERE ";
         $dltN = mysqli_query($this->connect(), $edt);
 
     }
