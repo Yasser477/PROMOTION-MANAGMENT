@@ -6,7 +6,7 @@ $promotionDAL = new promotionDAl();
 
 if(!empty($_POST)){
 	$promotion = new promotion();
-	$promotion->setName($_POST['name']);
+	$promotion->setName($_POST['Name']);
 	$promotionDAL->addPromotion($promotion);
 	
 	// redirect to index.php
@@ -52,7 +52,7 @@ if(!empty($_POST)){
 	</header> <br> <br>
 
 <form action="" method="POST" class="text-center">
-Nom de promotion: <input type="text" name="name">                                                          
+Nom de promotion: <input type="text" name="Name">                                                          
    
 <button type="submit">Envoyer</button> <br> <br>
 
@@ -67,9 +67,9 @@ Nom de promotion: <input type="text" name="name">
     </tr>
     <?php
     $data = $promotionDAL->displayData();
-    if($data){
+    // if($data){
          
-    }
+    // }
    
     ?>    
     <?php  
@@ -77,7 +77,7 @@ Nom de promotion: <input type="text" name="name">
             echo'
     <tr>
         <td>'.$value["name"].'</td>
-        <td> <a href="upD.php" name="editBtn" class="btn btn-info" > edit </a> </td>
+        <td> <a href="upD.php?idEdit='.$value['id'].'"  name="editBtn" class="btn btn-info" > edit </a> </td>
         <td>
         <a href="home.php?idDelete='.$value["id"].'" class="btn btn-danger" > delete </a>  
         </td>

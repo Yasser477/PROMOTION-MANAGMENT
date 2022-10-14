@@ -36,17 +36,17 @@
 
     public function selectById($id){
 
-        $edi = "SELECT * FROM promotion WHERE id = $id";
+        $edi = "SELECT * FROM promotion WHERE id = '$id'";
         $ediUp = mysqli_query($this->connect(), $edi);
 
-        if($ediUp->num_rows==1){
+        if($ediUp->num_rows == 1){
             return $ediUp;
         }
     }
 
-    public function editName(){
-
-        $edt = "UPDATE FROM promotion WHERE ";
+    public function editName($id, $name){
+        
+        $edt = "UPDATE promotion set name = '$name' WHERE id = $id";
         $dltN = mysqli_query($this->connect(), $edt);
 
     }
